@@ -1,0 +1,16 @@
+<div class="SearchResult navbar-light mx-auto">
+  <ul class="list-group mx-auto">
+      <li class="list-group-item" *ngFor = "let result of results; index as i">
+        <a href="/artist/{{result.name}}">
+          <img 
+          class="SearchResultImg" 
+          [src]="getImage(i)">
+        </a>
+        <a href="/artist/{{result.name}}">
+          <span>
+            {{result.name}}
+          </span>
+        </a>
+      </li>
+    </ul>
+</div>

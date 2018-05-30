@@ -1,0 +1,5 @@
+<app-error [error]="error"></app-error>
+<app-breadcrumbs></app-breadcrumbs>
+<app-artist-view [artists]="artistInfo"></app-artist-view>
+<app-topalbums-view [topAlbumsList]="topAlbumsList" *ngIf = "topAlbumsListLength"></app-topalbums-view>
+<app-similar-artists-view [similarArtists]="similarArtists" *ngIf = "similarArtistsLength"></app-similar-artists-view>

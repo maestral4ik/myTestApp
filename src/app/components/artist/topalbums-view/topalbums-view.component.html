@@ -1,0 +1,15 @@
+<div class="row justify-content-center mt-3" >
+    <div class="col ml-3">
+    <h2>Top Albums</h2>
+    </div>
+</div>
+<div class="container-fluid text-center pb-5">
+    <div class="row">
+        <div class="card cardcoll mb-5 topArtistsCard" *ngFor = "let album of topAlbumsList; index as i">
+            <a routerLink="/artist/{{album.artist.name}}/{{album.name}}"><img class="card-img-top" [src]="getImage(i)" alt=`{{album.name}}`></a>
+            <div class="card-block">
+            <a class="card-link" routerLink="/artist/{{album.artist.name}}/{{album.name}}"><h5 class="card-text">{{album.name}}</h5></a>
+            </div>
+        </div>
+    </div>
+</div>

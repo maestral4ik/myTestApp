@@ -1,0 +1,23 @@
+<div class="row mt-4 pl-3" *ngIf = "albums as album">
+  <div class="col-md-4">
+    <h5>Artist: {{album.artist}}</h5>
+    <img class="card-img-top" [src]="getImage()" [alt]="album.name">
+  </div>
+  <div class="col-md-8">
+      <h5>Album: {{album.name}}</h5>
+      <ul class="list-group" *ngIf = "album.tracks.track as tracks">
+          <li class="list-group-item d-flex justify-content-between align-items-center"
+          *ngFor = "let track of tracks; index as i ">
+          {{i+1}}. {{track.name}}
+            <span class="badge badge-dark">
+              {{track.duration | TrackTime}}
+            </span>
+          </li>
+      </ul>
+  </div>
+  <div class="col-md-12 mb-5 mt-4" *ngIf = "album.wiki"> 
+    <h5>Wiki content: </h5>
+    <p class="card-text" *ngIf = "album.wiki.content">{{album.wiki.content}}</p>
+    <p class="card-text" *ngIf = "!album.wiki.content">No informatiot in Wiki</p>
+  </div>
+</div>

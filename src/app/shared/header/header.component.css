@@ -1,0 +1,28 @@
+.inputWithIcon input{
+    padding-left: 40px;
+    margin-right: 80px;
+}
+.inputWithIcon{
+    position: relative;
+}
+.inputWithIcon i{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 11px 12px;
+    color: #343A40;
+}
+textarea:focus, input:focus{
+    outline: none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+@media(max-width: 992px){
+    .inputWithIcon{
+        margin: auto;
+    }
+    .inputWithIcon input{
+        margin-right: 0;
+    }
+}

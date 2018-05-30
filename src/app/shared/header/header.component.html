@@ -1,0 +1,32 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="">LastFm</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form 
+            class="form-inline my-2 my-lg-0 mx-auto"
+            #myForm="ngForm" 
+            (ngSubmit)="onSubmit(myForm)"
+            >
+                <div class="inputWithIcon">
+                    <i class="fas fa-search"></i>
+                    <input 
+                    class="form-control" 
+                    placeholder="Search"
+                    [minLength] = "minLength" 
+                    [(ngModel)]="searchStr" 
+                    (ngModelChange)="handleChange()" 
+                    name="Form"
+                    >   
+                </div>
+            </form>
+        </div>
+    </nav>
+    <app-search-preview
+     *ngIf = "isLoading" 
+     [results] = "artistsSearchPreview">
+    </app-search-preview>
+</header>

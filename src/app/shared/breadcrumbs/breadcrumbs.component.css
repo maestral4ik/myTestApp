@@ -1,0 +1,10 @@
+.breadcrumb{
+    background-color: inherit;
+}
+.breadcrumb-item{
+    font-weight: 700;
+    font-size: 20px;
+}
+.breadcrumb-item a{
+    color: #000000;
+}

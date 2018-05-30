@@ -1,0 +1,11 @@
+.SearchResult{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 20%;
+    z-index: 45;
+}
+.SearchResultImg{
+    height: 40px;
+}

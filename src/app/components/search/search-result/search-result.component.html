@@ -1,0 +1,10 @@
+<div class="container-fluid text-center pb-5">
+  <div class="row">
+      <div class="card cardcoll mb-5" *ngFor = "let result of searchResult">
+        <a routerLink="/artist/{{result.name}}"><img class="card-img-top" src='{{result.image["3"]["#text"]}}' alt="{{result.name}}"></a>
+        <div class="card-block">
+          <a routerLink="/artist/{{result.name}}" class="card-link"><h5 class="card-text">{{result.name}}</h5></a>
+        </div>
+      </div>
+  </div>
+</div>

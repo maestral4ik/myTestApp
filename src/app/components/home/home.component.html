@@ -1,0 +1,21 @@
+<div class="mx-auto loading" *ngIf = "loading">
+  <img src="../../../assets/Spinner-2.9s-200px.gif">
+</div>
+
+<app-error [error]="error"></app-error>
+
+<div class="row justify-content-center mt-5" *ngIf = "topArtistsLength">
+  <div class="col ml-3">
+    <h2>Top Artists</h2>
+  </div>
+</div>
+<div class="container-fluid text-center pb-5" *ngIf = "topArtistsLength">
+  <div class="row">
+      <div class="card cardcoll mb-5" *ngFor = "let artist of topArtists">
+        <a routerLink="/artist/{{artist.name}}"><img class="card-img-top" src='{{artist.image["3"]["#text"]}}' alt="{{artist.name}}"></a>
+        <div class="card-block">
+          <a routerLink="/artist/{{artist.name}}" class="card-link"><h5 class="card-text">{{artist.name}}</h5></a>
+        </div>
+      </div>
+  </div>
+</div>

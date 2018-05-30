@@ -1,0 +1,10 @@
+<div class="row align-center mt-5" *ngIf="error">
+  <div class="medium-6 large-4 column">
+    <div [class]="displayClass">
+      <h5>{{error.name}}</h5>
+      <p>
+        {{error.message}}
+      </p>
+    </div>
+  </div>
+</div>

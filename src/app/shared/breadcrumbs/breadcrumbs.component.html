@@ -1,0 +1,15 @@
+<div class="row pl-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" 
+        *ngFor="let link of breadcrumbs; let first = first; let last = last;" 
+        [class.active]='last'
+      >
+        <span [ngSwitch]="last && !first">
+          <span *ngSwitchCase="true">{{link.name}}</span>
+          <a [routerLink]="[link.path]" *ngSwitchDefault>{{link.name}}</a>
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
